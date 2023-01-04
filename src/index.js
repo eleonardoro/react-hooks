@@ -1,14 +1,14 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
-import Example04_useState from "./hooks/Example04_useState";
+import Example05_useState from "./hooks/Example05_useState";
 import reportWebVitals from "./reportWebVitals";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(
   <React.StrictMode>
-    <Example04_useState />
+    <Example05_useState />
   </React.StrictMode>
 );
 
