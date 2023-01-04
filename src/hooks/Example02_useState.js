@@ -7,7 +7,7 @@ function Example02_useState() {
   return (
     <div>
       <input type="text" onChange={e => setName(e.target.value)} placeholder='Insert Name'/>
-      <input type="text" onChange={e => setAge(e.target.value)} placeholder='Insert Age'/>
+      <input type="number" onChange={e => setAge(e.target.value)} placeholder='Insert Age'/>
       <br/>
       <br/>
       <br/>
