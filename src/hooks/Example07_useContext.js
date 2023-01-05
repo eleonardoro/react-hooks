@@ -1,17 +1,24 @@
-import React from "react";
+import React, { createContext, useContext, useState } from "react";
+
+const Context = createContext();
 
 function Main() {
   let text = "Sending infos";
 
+  const [background, setBackground] = useState('yellow')
+
+  const changeBackground = () => {
+    setBackground(background === 'yellow' ? 'blue' : 'yellow')
+  }
+
   return (
-    <div>
-      <h1></h1>
-      <Layer1 text={text} />
-    </div>
+    <Context.Provider value={{ text, background, changeBackground }}>
+      <Layer1 />
+    </Context.Provider>
   );
 }
 
-function Layer1({ text }) {
+function Layer1() {
   return (
     <div
       style={{
@@ -21,12 +28,12 @@ function Layer1({ text }) {
         display: "inline-block",
       }}
     >
-      <Layer2 text={text} />
+      <Layer2 />
     </div>
   );
 }
 
-function Layer2({ text }) {
+function Layer2() {
   return (
     <div
       style={{
@@ -37,22 +44,25 @@ function Layer2({ text }) {
         display: "inline-block",
       }}
     >
-      <Layer3 text={text} />
+      <Layer3 />
     </div>
   );
 }
 
-function Layer3({ text }) {
+function Layer3() {
+  const { text, background, changeBackground } = useContext(Context);
+
   return (
     <div
       style={{
-        backgroundColor: "yellow",
+        backgroundColor: background,
         width: "300px",
         height: "300px",
         margin: "50px",
       }}
     >
       <p>{text}</p>
+      <button onClick={changeBackground}>Change color</button>
     </div>
   );
 }
