@@ -1,14 +1,14 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
-import Example09_useReducer from "./hooks/Example09_useReducer";
+import Example10_useMemo from "./hooks/Example10_useMemo";
 import reportWebVitals from "./reportWebVitals";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(
   <React.StrictMode>
-    <Example09_useReducer />
+    <Example10_useMemo />
   </React.StrictMode>
 );
 
