@@ -1,14 +1,14 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
-import Example10_useMemo from "./hooks/Example10_useMemo";
+import Example11_useCallback from "./hooks/Example11_useCallback";
 import reportWebVitals from "./reportWebVitals";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(
   <React.StrictMode>
-    <Example10_useMemo />
+    <Example11_useCallback />
   </React.StrictMode>
 );
 
