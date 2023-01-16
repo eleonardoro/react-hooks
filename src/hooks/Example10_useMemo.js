@@ -1,6 +1,6 @@
 import React, { useMemo, useReducer, useState } from "react";
 
-function Example08_useRef() {
+function Example10_useMemo() {
   const [counter, setCounter] = useState(0);
   const [names, setNames] = useState(["John", "Peter", "Henry", "Ronaldo"]);
 
@@ -61,4 +61,4 @@ function ListNames2({ list }) {
   );
 }
 
-export default Example08_useRef;
+export default Example10_useMemo;

@@ -1,6 +1,6 @@
 import React, { useReducer } from "react";
 
-function Example08_useRef() {
+function Example09_useReducer() {
   const action = (state, action) => {
     switch (action) {
       case "increment":
@@ -26,4 +26,4 @@ function Example08_useRef() {
   );
 }
 
-export default Example08_useRef;
+export default Example09_useReducer;
