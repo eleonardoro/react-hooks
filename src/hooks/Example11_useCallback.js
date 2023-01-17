@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 
 function Example11_useCallback() {
   const [color, setColor] = useState("blue");
@@ -8,9 +8,9 @@ function Example11_useCallback() {
     setColor(color === "blue" ? "gray" : "blue");
   };
 
-  const listNumbers = () => {
+  const listNumbers = useCallback(() => {
     return [number - 1, number, number + 1];
-  };
+  }, [number]);
 
   return (
     <div style={{ backgroundColor: color }}>
@@ -30,7 +30,7 @@ function ListNumberComponent({ list }) {
   const [vector, setVector] = useState([]);
 
   useEffect(() => {
-    console.log('Component created!');
+    console.log("Component created!");
     setVector(list);
   }, [list]);
 
